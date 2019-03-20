@@ -4,5 +4,6 @@ geth_gcmode: archive
 geth_group: geth
 geth_path: /usr/local/bin/geth
 geth_url: https://gethstore.blob.core.windows.net/builds/{{ geth_version }}.tar.gz
-geth_version: geth-linux-amd64-1.8.11-dea1ce05
+geth_version: geth-linux-amd64-1.8.23-c9427004
 targetgaslimit: 8000000
+
