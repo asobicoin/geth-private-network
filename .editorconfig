@@ -1,3 +1,9 @@
-[*.yml]
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+[*.{json,yml}]
 indent_size=2
 indent_style=space
