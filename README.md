@@ -19,16 +19,22 @@ For `[::]`, fill in the IP of the other node
 
 Put the nonce, nodename and allocation Ethereum address in the hosts file like so
 
+**bootnode parameter is currently not working.**
+
+**Let's encrypt has a strict rate limit. Use staging environment while developing.**
+
 ```ini
 [geth_node]
-X.X.X.X nodename={node name}
+X.X.X.X nodename={node name} miners={thread number}
 
 [geth_node:vars]
 bootnode=enode://{pubkey}@{ip}:30303?discport=0
-nonce=0x{16 hex character}
-alloc_address=0x{ether address}
+nonce="0x{16 hex character}"
+alloc_address="0x{ether address}"
 networkid={integer}
 domain={domain for caddy reverse proxy}
+geth_verbosity=3
+letsencrypt_staging=True
 ```
 
 Run the playbook
